@@ -5,23 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Handy Sandy's Repair Shop</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #333;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img.logo {
+            width: 120px;
+            height: auto;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li {
+            display: inline;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hero {
+            background-color: #e0e0e0;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        section {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #555;
+        }
+        .services ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .services ul li {
+            flex: 1 1 calc(33.333% - 10px);
+            background-color: #f0f0f0;
+            padding: 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+        }
+        .testimonial {
+            margin: 20px 0;
+        }
+        .testimonial img {
+            width: 100%;
+            max-width: 200px;
+            margin-bottom: 10px;
+        }
+        .testimonial p {
+            font-style: italic;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        @media (max-width: 768px) {
+            .services ul {
+                flex-direction: column;
+            }
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
-        <h1>Handy Sandy's Repair Shop</h1>
-        <p>Your tools may talk, but we make them walk the talk!</p>
+        <img src="handy_mandy_logo.jpg" alt="Handy Mandy Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="hero">
+        <h1>Handy Sandy's Repair Shop</h1>
+        <p>Your tools may talk, but we make them walk the talk!</p>
+        <a href="https://www.instagram.com/youbreakitwefixitog/" target="_blank">Follow us on Instagram: @youbreakitwefixitog</a>
+    </div>
 
-    <section id="services">
+    <section id="services" class="services">
         <h2>Our Super-Duper Services</h2>
         <ul>
             <li>Fix-It-Fast Hammering</li>
@@ -35,30 +136,33 @@
     <section id="about">
         <h2>About Handy Sandy</h2>
         <p>Welcome to Handy Sandy's Repair Shop! Inspired by the legend, Handy Manny, we take repairs to a whole new level of fun and function. Our tools don't just fix things; they make you laugh while doing it!</p>
-        <p>Need a repair? Don't be shy, give us a try! We promise, no talking tools will annoy you here—well, maybe just a little.</p>
     </section>
 
     <section id="testimonials">
         <h2>Customer Testimonials</h2>
+
         <div class="testimonial">
             <h3>Carmela's Review</h3>
             <img src="carmela_art_room.jpg" alt="Carmela's Art Room">
-            <p>"Manny and the Tools were a big help cleaning out my art studio, though Felipe *did* accidentally recycle my sculpture! 😅 But they made up for it by handling the new electric sign, even when there wasn’t any power where it needed to go. Quick thinking and always reliable—just watch out for that recycling bin next time, Felipe!" - <strong>Carmela</strong></p>
+            <p>"Manny and the Tools were a big help cleaning out my art studio, though Felipe accidentally recycled my sculpture! 😅 But they made up for it by handling the new electric sign. Just watch out for that recycling bin next time, Felipe!" - <strong>Carmela</strong></p>
         </div>
+
         <div class="testimonial">
             <h3>Mr. Lopart's Review</h3>
             <img src="mr_lopart.jpg" alt="Mr. Lopart’s Shop">
-            <p>"Well, I suppose Manny and his Tools *did* help out in my shop when I needed it, but I could’ve done it myself, you know! 😤 They were quick and efficient, and I can’t complain about the quality of their work. Still, they could’ve let me handle it—it’s not like I needed all that *fancy tool work*. All in all, Manny did a good job, but next time, I’ll probably just fix it myself. After all, no one knows my shop like I do!" - <strong>Mr. Lopart</strong></p>
+            <p>"Manny and his Tools helped, but I could’ve done it myself! 😤 They were quick and efficient, but I didn’t need all that *fancy tool work*. Next time, I’ll just fix it myself." - <strong>Mr. Lopart</strong></p>
         </div>
+
         <div class="testimonial">
             <h3>Kevin and Nelson’s Mom’s Review</h3>
             <img src="kevin_nelson.jpg" alt="Kevin and Nelson’s Bunk Bed">
-            <p>"Manny built a beautiful bunk bed for my boys, and now we finally have space for Grandma! The boys love it, and it’s sturdy and safe. 😍 However, I was hoping to get a *little* discount—after all, we’re regular customers! 😠 Manny did good work, but next time, he should think about giving *better price* for family. Still, very good job. Boys happy. Grandma happy. I guess I am happy too… mostly!" - <strong>Kevin and Nelson’s Mom</strong></p>
+            <p>"Manny built a bunk bed for my boys. It's sturdy and safe, but I wanted a discount! 😠 Still, good job. Boys happy. Grandma happy. I guess I’m happy too!" - <strong>Kevin and Nelson’s Mom</strong></p>
         </div>
+
         <div class="testimonial">
             <h3>Francisco’s Review</h3>
             <img src="horse_flat.jpg" alt="Francisco’s Flat Tire">
-            <p>"Well, partner, let me tell ya, Manny saved my hide! 🐎 I was on my way to the horse show, and wouldn’t ya know it—flat tire on Estrella’s trailer! I thought I was plum outta luck. But Manny came in faster than a jackrabbit on a hot skillet, fixed that tire, and got me back on the road quicker than you can say 'yee-haw!' 🤠 And when that drawbridge got stuck? Shoot, Manny fixed it up like a true hero. I swear, this fella could rope the wind if he tried! Couldn’t be more thankful—this man’s the best!" - <strong>Francisco</strong></p>
+            <p>"Partner, Manny saved my hide! 🐎 Fixed that flat tire and got me to the horse show in no time. He’s a true hero! Couldn’t be more thankful—this man’s the best!" - <strong>Francisco</strong></p>
         </div>
     </section>
 
@@ -71,5 +175,6 @@
     <footer>
         <p>&copy; 2024 Handy Sandy's Repair Shop. We fix it right, the first time—unless it’s funnier the second time!</p>
     </footer>
+
 </body>
 </html>
